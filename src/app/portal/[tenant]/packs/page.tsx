@@ -25,7 +25,19 @@ export default async function PacksPage({ params }: PacksPageProps) {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {packs.map((pack) => (
-          <PackCard key={pack.id} pack={pack} tenantId={params.tenant} />
+          <PackCard 
+            key={pack.id} 
+            pack={{
+              ...pack,
+              description: pack.description || undefined,
+              imageUrl: pack.imageUrl || undefined,
+              items: pack.items.map(item => ({
+                productId: item.productId,
+                quantity: item.quantity
+              }))
+            }} 
+            tenantId={params.tenant} 
+          />
         ))}
       </div>
     </div>
