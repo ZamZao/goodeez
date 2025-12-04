@@ -1,0 +1,11 @@
+--2025-11-24 15:20:12--  https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=800
+Resolving images.unsplash.com (images.unsplash.com)... 151.101.38.208, 2a04:4e42:9::720
+Connecting to images.unsplash.com (images.unsplash.com)|151.101.38.208|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 17662 (17K) [image/jpeg]
+Saving to: ‘public/images/products/mug-ceramic.jpg’
+
+         public/im   0%[                ]       0  --.-KB/s               public/images/prod 100%[===============>]  17.25K  --.-KB/s    in 0s      
+
+2025-11-24 15:20:12 (57.0 MB/s) - ‘public/images/products/mug-ceramic.jpg’ saved [17662/17662]
+

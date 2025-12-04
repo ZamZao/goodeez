@@ -1,0 +1,106 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  // Use direct connection (no pgbouncer) for migrations/seeding when using Supabase/Neon
+  directUrl = env("DIRECT_DATABASE_URL")
+}
+
+// --- Tenant / Portal ---
+
+model Tenant {
+  id             String   @id @default(cuid())
+  slug           String   @unique
+  name           String
+  logoUrl        String?
+  primaryColor   String?
+  secondaryColor String?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  
+  orders         Order[]
+}
+
+// --- E-commerce / Orders ---
+
+model Order {
+  id                 String      @id @default(cuid())
+  tenantId           String
+  tenant             Tenant      @relation(fields: [tenantId], references: [id])
+  orderDate          DateTime    @default(now())
+  status             String      @default("pending") // pending, confirmed, processing, completed
+  total              Float
+  
+  // Customer Info
+  customerFirstName  String
+  customerLastName   String
+  customerEmail      String
+  customerCompany    String?
+  customerDepartment String?
+  customerPhone      String?
+
+  items              OrderItem[]
+}
+
+model OrderItem {
+  id        String   @id @default(cuid())
+  orderId   String
+  order     Order    @relation(fields: [orderId], references: [id])
+  
+  type      String   // 'product' or 'pack'
+  itemId    String   // productId or packId (snapshot)
+  name      String
+  quantity  Int
+  unitPrice Float
+}
+
+// --- Catalog (Products, Packs, Collections) ---
+
+model Product {
+  id           String      @id
+  slug         String      @unique
+  name         String
+  description  String?
+  price        Float
+  imageUrl     String
+  category     String?
+  
+  collectionId String?
+  collection   Collection? @relation(fields: [collectionId], references: [id])
+  
+  packItems    PackItem[]
+}
+
+model Collection {
+  id          String    @id
+  slug        String    @unique
+  name        String
+  description String?
+  imageUrl    String?
+  products    Product[]
+}
+
+model Pack {
+  id          String     @id
+  slug        String     @unique
+  name        String
+  description String?
+  price       Float
+  imageUrl    String?
+  items       PackItem[]
+}
+
+model PackItem {
+  id        String   @id @default(cuid())
+  packId    String
+  pack      Pack     @relation(fields: [packId], references: [id])
+  productId String
+  product   Product  @relation(fields: [productId], references: [id])
+  quantity  Int
+}
