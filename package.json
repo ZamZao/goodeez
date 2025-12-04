@@ -4,6 +4,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
+    "postinstall": "prisma generate",
     "optimize-images": "node scripts/optimize-images.js",
     "db:seed": "prisma db seed",
     "storage:seed": "ts-node scripts/seed-storage.ts"
