@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import Button from '@/components/ui/Button';
 
 export const Navbar = () => {
@@ -6,8 +7,13 @@ export const Navbar = () => {
     <nav className="sticky top-0 z-50 border-b border-goodeez-blue-50 bg-white/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <div className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-goodeez-blue-600 font-bold text-white">
-            G
+          <div className="relative h-8 w-8 overflow-hidden rounded-lg">
+            <Image
+              src="/images/logos/Goodeez2.jpg"
+              alt="Goodeez Logo"
+              fill
+              className="object-cover"
+            />
           </div>
           <span className="text-xl font-bold text-goodeez-blue-900">Goodeez</span>
         </div>

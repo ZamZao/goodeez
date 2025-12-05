@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export const Footer = () => {
   return (
     <footer className="bg-goodeez-blue-50 border-t border-goodeez-blue-100 py-12 mt-20">
@@ -5,8 +7,13 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="col-span-1 md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-goodeez-blue-600 font-bold text-white">
-                G
+              <div className="relative h-8 w-8 overflow-hidden rounded-lg">
+                <Image
+                  src="/images/logos/Goodeez2.jpg"
+                  alt="Goodeez Logo"
+                  fill
+                  className="object-cover"
+                />
               </div>
               <span className="text-xl font-bold text-goodeez-blue-900">Goodeez</span>
             </div>

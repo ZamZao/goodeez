@@ -36,13 +36,40 @@ export default function LandingHero() {
           <div className="relative">
             <div className="relative rounded-3xl bg-white shadow-2xl p-4 md:p-6 overflow-hidden border border-slate-100 transform rotate-1 hover:rotate-0 transition duration-500">
               {/* Mockup Header */}
-              <div className="flex items-center justify-between mb-6 border-b border-slate-100 pb-4">
-                <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full bg-red-400"></div>
-                  <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
-                  <div className="w-3 h-3 rounded-full bg-green-400"></div>
+              <div className="mb-4 border-b border-slate-100 pb-4">
+                {/* Browser bar */}
+                <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center gap-2">
+                    <div className="w-3 h-3 rounded-full bg-red-400" />
+                    <div className="w-3 h-3 rounded-full bg-yellow-400" />
+                    <div className="w-3 h-3 rounded-full bg-green-400" />
+                  </div>
+                  <div className="flex items-center gap-2 text-[10px] text-slate-400 bg-slate-50 rounded-full px-3 py-1">
+                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                    votreentreprise.goodeez.com/portal
+                  </div>
                 </div>
-                <div className="h-2 w-20 bg-slate-100 rounded-full"></div>
+
+                {/* Portal info */}
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <div className="h-7 w-7 rounded-full bg-blue-50 flex items-center justify-center text-[11px] font-semibold text-blue-700">
+                      AC
+                    </div>
+                    <div>
+                      <p className="text-xs font-semibold text-slate-900">
+                        Portail merch · votre entreprise
+                      </p>
+                      <p className="text-[11px] text-slate-400">
+                        Packs d’onboarding, cadeaux & events
+                      </p>
+                    </div>
+                  </div>
+                  <div className="hidden sm:inline-flex items-center gap-1 rounded-full bg-slate-900 text-white text-[10px] px-3 py-1">
+                    <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                    Portail actif
+                  </div>
+                </div>
               </div>
 
               {/* Mockup Grid */}
@@ -51,39 +78,51 @@ export default function LandingHero() {
                   <div className="absolute top-2 left-2 z-10 bg-[var(--brand-primary)] text-white text-[10px] font-bold px-2 py-1 rounded-full">
                     Pack Onboarding
                   </div>
-                  <div className="absolute inset-0 flex items-center justify-center text-slate-300">
-                    <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /></svg>
-                  </div>
+                  <Image
+                    src="/images/herolanding/hoodie.png"
+                    alt="Hoodie Mockup"
+                    fill
+                    className="object-contain p-4 drop-shadow-xl"
+                  />
                 </div>
                 <div className="aspect-square bg-slate-50 rounded-xl overflow-hidden relative">
-                   <div className="absolute inset-0 flex items-center justify-center text-slate-300">
-                    <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
-                  </div>
+                  <Image
+                    src="/images/herolanding/totebag.png"
+                    alt="Tote Bag Mockup"
+                    fill
+                    className="object-contain p-4 drop-shadow-xl"
+                  />
                 </div>
                 <div className="aspect-square bg-slate-50 rounded-xl overflow-hidden relative">
-                   <div className="absolute inset-0 flex items-center justify-center text-slate-300">
-                    <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" /></svg>
-                  </div>
+                  <Image
+                    src="/images/herolanding/bottle.png"
+                    alt="Bottle Mockup"
+                    fill
+                    className="object-contain p-4 drop-shadow-xl"
+                  />
                 </div>
                 <div className="aspect-square bg-slate-50 rounded-xl overflow-hidden relative">
-                   <div className="absolute inset-0 flex items-center justify-center text-slate-300">
-                    <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M12 6v6m0 0v6m0-6h6m-6 0H6" /></svg>
-                  </div>
+                  <Image
+                    src="/images/herolanding/casquette.png"
+                    alt="Cap Mockup"
+                    fill
+                    className="object-contain p-4 drop-shadow-xl"
+                  />
                 </div>
               </div>
 
               {/* Mockup Footer Badge */}
               <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2">
                 <div className="inline-flex items-center gap-2 rounded-full bg-slate-900 text-white text-xs px-4 py-2 shadow-lg whitespace-nowrap">
-                  <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
-                  Livraison directe aux collaborateurs
+                  <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+                  Livraison à vos agences ou directe aux collaborateurs
                 </div>
               </div>
             </div>
-            
+
             {/* Decorative elements */}
-            <div className="absolute -top-10 -right-10 w-40 h-40 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-            <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-purple-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+            <div className="absolute -top-10 -right-10 w-40 h-40 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob" />
+            <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-purple-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000" />
           </div>
         </div>
       </div>

@@ -1,16 +1,16 @@
 export default function LandingHowItWorks() {
   const steps = [
     {
-      title: "On crée votre portail brandé",
-      description: "Sélectionnez vos produits, validez vos designs. Nous configurons votre boutique privée en quelques jours."
+      title: "Votre portail est créé en 10 secondes",
+      description: "Uploadez votre logo. Boom : votre boutique brandée est prête, avec packs & produits pré-configurés."
     },
     {
-      title: "Vos équipes commandent leurs packs",
-      description: "Donnez accès à vos managers ou employés. Ils commandent en autonomie selon les budgets alloués."
+      title: "Vos équipes commandent en autonomie",
+      description: "Partagez le lien. Managers & collaborateurs commandent leurs packs selon le budget alloué. Plus d’emails, plus d’Excel."
     },
     {
-      title: "Nous gérons production & livraison",
-      description: "Nous produisons à la demande ou piochons dans votre stock, et expédions avec suivi en 48h."
+      title: "Nous produisons & expédions en 48h",
+      description: "Production à la demande ou via votre stock tampon. Livraison suivie partout en Europe."
     }
   ];
 
@@ -18,7 +18,10 @@ export default function LandingHowItWorks() {
     <section id="how-it-works" className="bg-slate-50 py-16 md:py-24 border-t border-slate-200">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900">Comment ça marche ?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Comment ça marche ?</h2>
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            Votre portail brandé est prêt instantanément. Vos équipes commandent. Nous produisons & expédions. Simple, rapide, sans gestion interne.
+          </p>
         </div>
 
         <div className="grid gap-8 md:grid-cols-3 relative">

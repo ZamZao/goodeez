@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import '../styles/globals.css'
 
 export const metadata: Metadata = {
-  title: 'OneStopMerch',
-  description: 'Multi-tenant merch portal generator',
+  title: 'Goodeez',
+  description: 'Le #1 des goodies éco-responsables pour les entreprises',
 }
 
 export default function RootLayout({

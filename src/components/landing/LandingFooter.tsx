@@ -9,14 +9,14 @@ export default function LandingFooter() {
           <div className="col-span-1 md:col-span-2">
             <Link href="/" className="flex items-center gap-1 mb-4">
               <Image 
-                src="/images/logos/Goodeez2.jpg" 
+                src="/images/logos/goodeezlogo.png" 
                 alt="Goodeez Icon" 
                 width={32} 
                 height={32} 
                 className="h-8 w-auto object-contain rounded-sm"
               />
               <Image 
-                src="/images/logos/Goodeez3.jpg" 
+              src="/images/logos/goodeez.png" 
                 alt="Goodeez Logo" 
                 width={100} 
                 height={32} 
@@ -32,19 +32,19 @@ export default function LandingFooter() {
           <div>
             <h4 className="font-bold text-white mb-4">Produit</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link href="#features" className="hover:text-white transition">Fonctionnalités</Link></li>
-              <li><Link href="#packs" className="hover:text-white transition">Packs</Link></li>
+              <li><Link href="/#features" className="hover:text-white transition">Fonctionnalités</Link></li>
+              <li><Link href="/#packs" className="hover:text-white transition">Packs</Link></li>
               <li><Link href="/pricing" className="hover:text-white transition">Tarifs</Link></li>
-              <li><Link href="#faq" className="hover:text-white transition">FAQ</Link></li>
+              <li><Link href="/#faq" className="hover:text-white transition">FAQ</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-bold text-white mb-4">Légal</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/terms" className="hover:text-white transition">CGU</Link></li>
-              <li><Link href="/privacy" className="hover:text-white transition">Confidentialité</Link></li>
-              <li><Link href="/legal" className="hover:text-white transition">Mentions légales</Link></li>
+              <li><Link href="/legal/cgu" className="hover:text-white transition">CGU</Link></li>
+              <li><Link href="/legal/confidentialite" className="hover:text-white transition">Confidentialité</Link></li>
+              <li><Link href="/legal/mentions-legales" className="hover:text-white transition">Mentions légales</Link></li>
             </ul>
           </div>
         </div>
